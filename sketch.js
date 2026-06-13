@@ -9,19 +9,17 @@ let angle = 0;
 let rotation = 0;
 let resetButton;
 let font;
-//comment
 
 function preload() {
-  wheel = loadImage("wheel.png");
-  ground = loadImage("background.png")
-  wormhole = loadImage("wormhole.png")
-  song = loadSound("song.mp3");
-  squeak = loadSound("squeak.mp3");
-  font = loadFont("cocogoose.ttf");
+  wheel = loadImage("./assets/wheel.png");
+  ground = loadImage("./assets/background.png")
+  wormhole = loadImage("./assets/wormhole.png")
+  song = loadSound("./assets/song.mp3");
+  squeak = loadSound("./assets/squeak.mp3");
+  font = loadFont("./assets/cocogoose.ttf");
 }
 
 function setup() {
-  song.loop();
   createCanvas(windowWidth, windowHeight);
   noFill();
   for (let i = 0; i < 10; i++) {
@@ -44,6 +42,7 @@ function setup() {
   resetButton.style("color", "white");
   resetButton.position(10, 40);
   resetButton.mousePressed(resetMovers);
+  song.loop();
 }
 
 function draw() {
