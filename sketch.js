@@ -11,12 +11,12 @@ let resetButton;
 let font;
 
 function preload() {
-  wheel = loadImage("/assets/wheel.png");
-  ground = loadImage("/assets/background.png")
-  wormhole = loadImage("/assets/wormhole.png")
-  song = loadSound("/assets/song.mp3");
-  squeak = loadSound("/assets/squeak.mp3");
-  font = loadFont("/assets/cocogoose.ttf");
+  wheel = loadImage("wheel.png");
+  ground = loadImage("background.png")
+  wormhole = loadImage("wormhole.png")
+  song = loadSound("song.mp3");
+  squeak = loadSound("squeak.mp3");
+  font = loadFont("cocogoose.ttf");
 }
 
 function setup() {
