@@ -1,6 +1,6 @@
 # Flea-Circus
 
-This is an interractive website that simulates a Flea Circus. At the begining, there are 5 autonomous fleas running around. With each click, the audience can add another flea to the circus.
+This is an interractive website that simulates a Flea Circus. At the begining, there are 10 autonomous fleas running around. With each click, the audience can add another flea to the circus.
 
 If a flea gets inside of the merry-go-around in the middle of the screen, the merry-go-around's spin speeds up and so does the flea's movement. Once the flea leaves the merry-go-around, the spinning goes back to original speed while flea's speed stays increased (it gets excited from the ride).
 
