@@ -7,3 +7,6 @@ If a flea gets inside of the merry-go-around in the middle of the screen, the me
 There are also two spinning wormhole objects on each side. If a flea gets close to one of them, it gets sucked in and teleported to a space nearby another wormhole while making a squeaky sound.
 
 A slider is located on the top left can be used to adjust the volume of the background music, as well as a button to delete all existing fleas.
+
+Vector art done by me.
+Sounds are sourced from Pixabay.
