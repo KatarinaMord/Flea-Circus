@@ -12,7 +12,7 @@ class Mover {
 
   display() {
     noFill();
-    strokeWeight(5);
+    strokeWeight(4);
     line(this.prevPosition.x,this.prevPosition.y,this.position.x,this.position.y);
   }
 

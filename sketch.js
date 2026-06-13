@@ -1,5 +1,4 @@
 let movers = [];
-let cannon;
 let wheel;
 let ground;
 let wormhole;
@@ -8,6 +7,8 @@ let squeak;
 let volumeSlider;
 let angle = 0;
 let rotation = 0;
+let resetButton;
+let font;
 
 function preload() {
   wheel = loadImage("wheel.png");
@@ -15,13 +16,14 @@ function preload() {
   wormhole = loadImage("wormhole.png")
   song = loadSound("song.mp3");
   squeak = loadSound("squeak.mp3");
+  font = loadFont("cocogoose.ttf");
 }
 
 function setup() {
   song.loop();
   createCanvas(windowWidth, windowHeight);
   noFill();
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 10; i++) {
     let m = new Mover(random(width), random(height));
     movers.push(m);
   }
@@ -30,8 +32,17 @@ function setup() {
   angleMode(DEGREES);
 
   volumeSlider = createSlider(0, 1, 0.5, 0.01);
-  volumeSlider.position(115, 10);
+  volumeSlider.position(145, 10);
   volumeSlider.size(80);
+
+  resetButton = createButton('Flea Count Reset');
+  resetButton.style("border-radius","12px");
+  resetButton.style("font-size", "15px");
+  resetButton.style("border-color", "#A03434");
+  resetButton.style("background-color","#A03434");
+  resetButton.style("color", "white");
+  resetButton.position(10, 40);
+  resetButton.mousePressed(resetMovers);
 }
 
 function draw() {
@@ -43,9 +54,10 @@ function draw() {
 
   fill("#A03434");
   stroke("#A03434");
+  textFont(font);
   textSize(16);
   strokeWeight(0.5);
-  text("Song volume:", 10, 24);
+  text("Song volume:", 12, 26);
 
   push();
   translate(width / 2, height / 2);
@@ -103,4 +115,8 @@ function draw() {
 function mousePressed() {
   let mover = new Mover(mouseX, mouseY, 20);
   movers.push(mover);
+}
+
+function resetMovers() {
+  movers = [];  
 }
